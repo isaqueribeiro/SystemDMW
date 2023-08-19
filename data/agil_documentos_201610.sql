@@ -1,0 +1,205 @@
+/*------ SYSDBA 12/10/2016 09:41:07 --------*/
+
+ALTER TABLE TBESTABELECIMENTO
+    ADD SN_ORCAO_PUBLICO DMN_BOOLEAN;
+
+COMMENT ON COLUMN TBESTABELECIMENTO.SN_ORCAO_PUBLICO IS
+'Orgao Publico:
+0 - Nao
+1 - Sim';
+
+alter table TBESTABELECIMENTO
+alter ID_ESTABELECIMENTO position 1;
+
+alter table TBESTABELECIMENTO
+alter TP_PESSOA position 2;
+
+alter table TBESTABELECIMENTO
+alter NM_RAZAO position 3;
+
+alter table TBESTABELECIMENTO
+alter NM_FANTASIA position 4;
+
+alter table TBESTABELECIMENTO
+alter NR_CNPJ position 5;
+
+alter table TBESTABELECIMENTO
+alter NR_INSC_EST position 6;
+
+alter table TBESTABELECIMENTO
+alter NR_INSC_MUN position 7;
+
+alter table TBESTABELECIMENTO
+alter CD_CNAE_PRINCIPAL position 8;
+
+alter table TBESTABELECIMENTO
+alter CD_CNAE_SECUNDARIA position 9;
+
+alter table TBESTABELECIMENTO
+alter SN_ORCAO_PUBLICO position 10;
+
+alter table TBESTABELECIMENTO
+alter SN_ATIVO position 11;
+
+alter table TBESTABELECIMENTO
+alter TP_ENDERECO position 12;
+
+alter table TBESTABELECIMENTO
+alter DS_ENDERECO position 13;
+
+alter table TBESTABELECIMENTO
+alter NR_ENDERECO position 14;
+
+alter table TBESTABELECIMENTO
+alter DS_COMPLEMENTO position 15;
+
+alter table TBESTABELECIMENTO
+alter CD_BAIRRO position 16;
+
+alter table TBESTABELECIMENTO
+alter NR_CEP position 17;
+
+alter table TBESTABELECIMENTO
+alter CD_CIDADE position 18;
+
+alter table TBESTABELECIMENTO
+alter CD_UF position 19;
+
+alter table TBESTABELECIMENTO
+alter CD_ESTADO position 20;
+
+alter table TBESTABELECIMENTO
+alter DS_EMAIL position 21;
+
+alter table TBESTABELECIMENTO
+alter NM_CONTATO position 22;
+
+alter table TBESTABELECIMENTO
+alter NR_TELEFONE position 23;
+
+alter table TBESTABELECIMENTO
+alter NR_COMERCIAL position 24;
+
+alter table TBESTABELECIMENTO
+alter NR_CELULAR position 25;
+
+alter table TBESTABELECIMENTO
+alter US_CADASTRO position 26;
+
+alter table TBESTABELECIMENTO
+alter DH_CADASTRO position 27;
+
+alter table TBESTABELECIMENTO
+alter HASH_CADASTRO position 28;
+
+alter table TBESTABELECIMENTO
+alter US_ALTERACAO position 29;
+
+alter table TBESTABELECIMENTO
+alter DH_ALTERACAO position 30;
+
+alter table TBESTABELECIMENTO
+alter HASH_ALTERACAO position 31;
+
+
+
+
+/*------ SYSDBA 12/10/2016 09:41:15 --------*/
+
+UPDATE TBESTABELECIMENTO
+SET SN_ORCAO_PUBLICO = 0;
+
+
+
+
+/*------ SYSDBA 12/10/2016 09:44:32 --------*/
+
+ALTER TABLE TBLICENCA_FUNCIONAMENTO
+    ADD SN_LICENCA_PUBLICA DMN_BOOLEAN;
+
+COMMENT ON COLUMN TBLICENCA_FUNCIONAMENTO.SN_LICENCA_PUBLICA IS
+'Licenca Publica:
+0 - Nao
+1 - Sim';
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter ID_LICENCA position 1;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter NR_EXERCICIO position 2;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter NR_LICENCA position 3;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter NR_PROCESSO position 4;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter DT_EMISSAO position 5;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter DT_VALIDADE position 6;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter DT_APROVACAO position 7;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter ID_ESTABELECIMENTO position 8;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter CD_CATEGORIA position 9;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter CD_ATIVIDADE position 10;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter CD_ATIVIDADE_SECUNDARIA position 11;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter DS_AUTENTICACAO position 12;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter SN_LICENCA_PUBLICA position 13;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter TP_SITUACAO position 14;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter CD_RESPONSAVEL position 15;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter NM_RESPONSAVEL_ESTABELECIMENTO position 16;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter NR_RESPONSAVEL_ESTABELECIMENTO position 17;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter CN_RESPONSAVEL_ESTABELECIMENTO position 18;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter DS_OBSERVACAO position 19;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter US_CADASTRO position 20;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter DH_CADASTRO position 21;
+
+alter table TBLICENCA_FUNCIONAMENTO
+alter HASH_CADASTRO position 22;
+
+
+
+
+/*------ SYSDBA 12/10/2016 09:44:37 --------*/
+
+UPDATE TBLICENCA_FUNCIONAMENTO
+SET SN_LICENCA_PUBLICA = 0;
+
+
+
+
+/*------ SYSDBA 12/10/2016 09:46:36 --------*/
+
+ALTER TABLE TBESTABELECIMENTO ALTER SN_ORCAO_PUBLICO TO SN_ORGAO_PUBLICO;
+
